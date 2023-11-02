@@ -1,3 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .header{
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: var(--gray-50, #F5F7FA);
+}
+
+.header ul {
+    margin-left: 72px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.header ul li {
+    color: var(--gray-900, #141D24);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.currency {
+    margin-right: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
