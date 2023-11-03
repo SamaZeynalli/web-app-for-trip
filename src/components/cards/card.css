@@ -1,0 +1,94 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cardImg {
+    width: 416px;
+    height: 230px;
+    border-radius: 20px 20px 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.love {
+    border-radius: 24px;
+    background: var(--violet-500, #4A21EF);
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.save {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    width: 36px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border-radius: 24px;
+    border: 1px solid var(--gray-50, #F5F7FA);
+    background: var(--primary-white, #FFF);
+}
+
+.text h2 {
+    color: var(--gray-500, #5E6F7D);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.text p {
+    width: 296px;
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; 
+}
+
+.days {
+    color: var(--gray-500, #5E6F7D);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.from {
+    color: var(--gray-500, #5E6F7D);
+    text-align: right;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.price {
+    color: var(--gray-900, #141D24);
+    text-align: right;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}

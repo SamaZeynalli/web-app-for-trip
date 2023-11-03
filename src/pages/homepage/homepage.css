@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.trips {
+    margin: 0 54px;
+    background-image: url('../../components/IMG/Video\ placeholder.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 1332px;
+    height: 672px;
+    padding: 0px 420px;
+    background-position: center center;
+    text-align: center;
+}
+
+.trips h1 {
+    color: var(--primary-white, #FFF);
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px; 
+    margin-bottom: 16px; 
+}
+
+.trips p {
+    color: var(--primary-white, #FFF);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.trips button {
+    border-radius: 24px;
+    background: var(--violet-500, #4A21EF);
+    display: flex;
+    width: 40px;
+    padding: 8px 16px;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.trips .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 99px;
+    border: 1px solid var(--gray-200, #C9D2DA);
+    background: var(--primary-white, #FFF);
+    width: 392px;
+    padding: 8px 8px 8px 24px;
+    gap: 24px;
+}
+
+.trips .search input {
+    color: var(--gray-300, #97A5B2);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+}

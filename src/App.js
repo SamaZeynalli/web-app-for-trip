@@ -4,12 +4,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import About from './pages/about/aboutus';
 import Country from './pages/country/index';
+import Homepage from './pages/homepage/Homepage';
 
 function App() {
   return (
     <div className='wrapper'>
       <BrowserRouter>
         <Routes>
+        <Route path="/" element={<Homepage/>} />
           <Route path='about' element={<About/>
           } />
 
