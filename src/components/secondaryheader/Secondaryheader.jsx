@@ -8,19 +8,20 @@ import MyImage from '../IMG/Logotourist.png'
 const Secondaryheader = () => {
     return(
         <div className="secondary">
-            <div>
-                <ul className="links">
-                    <li><Link to="/Destinations">Destinations</Link></li>
-                    <li><Link to="/Privatetrips">Private trips</Link></li>
-                </ul>
+            <div className="container">
+                <div className="menu">
+                    <Link to="/Destinations" className="destination">Destinations</Link>
+                    <Link to="/Privatetrips" className="destination">Private trips</Link>
+                </div>
+                <div className="myImage">
+                    <img src={MyImage} alt="" />
+                </div>
+                <div className="loginBtn">
+                        <button>I'm Feeling Lucky</button>
+                        <button>Login</button>
+                </div>
             </div>
-            <div>
-                <img src={MyImage} alt="" />
-            </div>
-            <div className="btn">
-                <button>I'm Feeling Lucky</button>
-                <button>Login</button>
-            </div>
+            
         </div>
     )
 }

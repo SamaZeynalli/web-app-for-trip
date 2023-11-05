@@ -5,33 +5,48 @@
 }
 
 .trips {
-    margin: 0 54px;
     background-image: url('../../components/IMG/Video\ placeholder.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
+    padding: 0px 54px;
     flex-direction: column;
-    border-radius: 20px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 1332px;
     height: 672px;
     padding: 0px 420px;
-    background-position: center center;
-    text-align: center;
+    border-radius: 20px;
+    background-color: linear-gradient(0deg, rgba(20, 29, 36, 0.20) 0%, rgba(20, 29, 36, 0.20) 100%);
+
 }
 
-.trips h1 {
+.trips .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.trips .text .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.trips .text .texts h1 {
     color: var(--primary-white, #FFF);
+    text-align: center;
     font-family: Inter;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
-    line-height: 60px; 
-    margin-bottom: 16px; 
+    line-height: 60px;
 }
 
-.trips p {
+.trips .text .texts p {
     color: var(--primary-white, #FFF);
     text-align: center;
     font-family: Inter;
@@ -39,40 +54,12 @@
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    margin-bottom: 60px;
-}
-
-.trips button {
-    border-radius: 24px;
-    background: var(--violet-500, #4A21EF);
-    display: flex;
-    width: 40px;
-    padding: 8px 16px;
-    gap: 8px;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
 }
 
 
-.trips .search {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 99px;
-    border: 1px solid var(--gray-200, #C9D2DA);
-    background: var(--primary-white, #FFF);
-    width: 392px;
-    padding: 8px 8px 8px 24px;
-    gap: 24px;
-}
 
-.trips .search input {
-    color: var(--gray-300, #97A5B2);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    border: none;
-}
+
+
+
+
+

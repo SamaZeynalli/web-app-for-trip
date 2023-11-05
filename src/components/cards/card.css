@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
 }
 
 .cardImg {
@@ -9,16 +10,30 @@
     height: 230px;
     border-radius: 20px 20px 0px 0px;
     background-repeat: no-repeat;
+    position: relative;
+    background-image: cover;
 }
 
 .love {
-    border-radius: 24px;
-    background: var(--violet-500, #4A21EF);
     display: flex;
     padding: 8px 16px;
     justify-content: center;
     align-items: center;
     gap: 8px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    border-radius: 24px;
+    background: var(--violet-500, #4A21EF);
+    border: none;
+}
+
+.love img {
+    width: 20px;
+    height: 20px;
+}
+
+.love p {
     color: var(--primary-white, #FFF);
     font-family: Inter;
     font-size: 16px;
@@ -28,16 +43,13 @@
 }
 
 .save {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+    position: absolute;
     display: flex;
     width: 36px;
     padding: 8px 16px;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    position: absolute;
     right: 12px;
     top: 12px;
     border-radius: 24px;
@@ -45,7 +57,34 @@
     background: var(--primary-white, #FFF);
 }
 
-.text h2 {
+.save img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.text {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 0px 0px 15px 15px;
+    border-right: 1px solid var(--gray-100, #E3E7EB);
+    border-bottom: 1px solid var(--gray-100, #E3E7EB);
+    border-left: 1px solid var(--gray-100, #E3E7EB);
+    background: var(--primary-white, #FFF);
+}
+
+.text .upperText {
+    display: flex;
+    width: 384px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.text .upperText h2 {
     color: var(--gray-500, #5E6F7D);
     font-family: Inter;
     font-size: 12px;
@@ -54,7 +93,7 @@
     line-height: 16px;
 }
 
-.text p {
+.text .upperText p {
     width: 296px;
     color: var(--gray-900, #141D24);
     font-family: Inter;
@@ -64,7 +103,15 @@
     line-height: 20px; 
 }
 
-.days {
+
+.priceButton button {
+    display: flex;
+    width: 384px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.priceButton button .days {
     color: var(--gray-500, #5E6F7D);
     font-family: Inter;
     font-size: 14px;
@@ -73,7 +120,7 @@
     line-height: 24px;
 }
 
-.from {
+.priceButton button .from {
     color: var(--gray-500, #5E6F7D);
     text-align: right;
     font-family: Inter;
@@ -83,7 +130,23 @@
     line-height: 24px;
 }
 
-.price {
+.priceButton button .primary {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.priceButton button .primary .from {
+    color: var(--gray-500, #5E6F7D);
+    text-align: right;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.priceButton button .primary .price {
     color: var(--gray-900, #141D24);
     text-align: right;
     font-family: Inter;
@@ -92,3 +155,4 @@
     font-weight: 600;
     line-height: 24px;
 }
+

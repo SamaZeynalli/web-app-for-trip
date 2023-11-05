@@ -3,13 +3,19 @@ import './card.css';
 import SaveImg from "../IMG/bookmark.png";
 
 function Card(props) {
+    const cardStyle = {
+        backgroundImage: `url(${props.image})`,
+    };
+
     return (
         <div className="card">
-            <div className='cardImg'>
-                <img src={props.image} alt={props.title} />
+            <div className='cardImg' style={cardStyle}>
                 <div className='content'>
                     {props.showLovebutton && (
-                        <button className='love'>{props.love}</button>
+                        <button className='love'>
+                            <img src={props.LoveImg} alt="" />
+                            <p>{props.love}</p>
+                        </button>
                     )}
                     
                     {props.showSavebutton && (
@@ -20,14 +26,18 @@ function Card(props) {
                 </div>
             </div>
             <div className='text'>
-                <h2>{props.title}</h2>
-                <p>{props.description}</p>
-                <div className="price">
-                    <div className="days">{props.days}</div>
-                    <div>
-                        <div className='from'>{props.from}</div>
-                        <div className="price">{props.price}</div>
-                    </div>
+                <div className='upperText'>
+                    <h2>{props.title}</h2>
+                    <p>{props.description}</p>
+                </div>
+                <div className="priceButton">
+                    <button>
+                        <div className="days">{props.days}</div>
+                        <div className='primary'>
+                            <div className='from'>{props.from}</div>
+                            <div className="price ">{props.price}</div>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
