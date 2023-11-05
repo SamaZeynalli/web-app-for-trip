@@ -2,49 +2,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .footer {
-    margin-top: 100px;
     padding: 72px 182px;
     background: var(--gray-50, #F5F7FA);
+}
+
+.footer .footer_main {
     display: flex;
     gap: 24px;
     justify-content: space-between;
 }
 
-.footer ul {
-    list-style-type: none;
-    color: var(--gray-700, #3A4D5A);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; 
-    gap: 8px;
-    margin-top: 24px;
-}
-
-.footer div {
-    min-width: 196px;
-}
-
-.footer_main {
+.footer .footer_main .body {
     display: flex;
+    width: 416px;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
 }
 
-.footer p {
+.footer .footer_main .body .logo {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer .footer_main .body .logo img {
+    width: 142px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.footer .footer_main .body .logo p {
     color: var(--gray-700, #3A4D5A);
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; 
+    line-height: 24px;
 }
 
-.footer span {
+.footer .footer_main .body span {
     color: var(--gray-700, #3A4D5A);
     font-family: Inter;
     font-size: 12px;
@@ -53,14 +57,48 @@
     line-height: 16px; 
 }
 
-.footer h3{
+.footer .footer_main .support {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.footer .footer_main .support h3 {
     color: var(--gray-900, #141D24);
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
+    line-height: 24px;
+}
+
+.footer .footer_main .support ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    list-style-type: none;
+}
+
+.footer .footer_main .support ul li {
+    color: var(--gray-700, #3A4D5A);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 24px; 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
