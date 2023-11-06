@@ -19,15 +19,22 @@ import Trend12 from '../../components/IMG/trend12.png';
 import Save from '../../components/IMG/save.png';
 import LoveImg1 from '../../components/IMG/LoveImg.png';
 import LoveImg2 from '../../components/IMG/loveImg2.png';
+import BackImg from '../../components/IMG/review.png';
 import Map from '../../components/IMG/Frame1.png';
 import Baggage from '../../components/IMG/Frame2.png';
 import Person from '../../components/IMG/Frame3.png';
 import Callcenter from '../../components/IMG/Callcenter.png';
 import Callcenter1 from '../../components/IMG/Callcenter1.png';
 import Local from '../../components/IMG/Framelocal.png';
-import Right from '../../components/IMG/Chevron_Right.png'
+import UpTo from '../../components/IMG/Arrow_Up_SM.png'
+import JoinUs from "../../components/joinus/JoinUs";
+import Section from "../../components/elsewheresection/Section";
 
 function Homepage() {
+
+    const divStyle = {
+        backgroundImage: `url(${BackImg})`
+      };
 
     const card1Props = {
         image: Trend1,
@@ -142,7 +149,7 @@ function Homepage() {
     }
 
     const card10Props = {
-        image: Trend11,
+        image: Trend10,
         showLovebutton: false,
         showSavebutton: true,
         SaveImg: Save,
@@ -154,7 +161,7 @@ function Homepage() {
     }
 
     const card11Props = {
-        image: Trend10,
+        image: Trend11,
         showLovebutton: false,
         showSavebutton: true,
         SaveImg: Save,
@@ -181,7 +188,7 @@ function Homepage() {
     return (
       <div>
         <Header/>
-        <div className="trips">
+        <div className="trips picture1">
             <div className="text1">
                 <div className="texts">
                     <h1>We create trips you love</h1>
@@ -245,7 +252,7 @@ function Homepage() {
                 </div>
             </div>
         </div>
-        <div className="review">
+        <div className="review" style={divStyle}>
             <div className="reviewText">
                 <div className="review1">
                     <div className="comment">
@@ -293,26 +300,12 @@ function Homepage() {
                 </div>
             </div>
         </div>
-        <div className="section">
-            <div className="body">
-                <p>Looking to go elsewhere?</p>
-                <button>
-                    <span>Our destinations</span>
-                    <img src={Right} alt="" />
-                </button>
-            </div>
-        </div>
-        <div className="joinUs">
-            <div className="joinBody">
-                <div className="joinText">
-                    <span>Join our travel revolution</span>
-                    <p>Sign up to stay in the know - hot new travel spots, how we strive to make the world a better place, and all sorts of surprises.</p>
-                </div>
-                <div className="inputButton">
-                    <input type="text" placeholder="Email"/>
-                    <button>Sign up</button>
-                </div>
-            </div>
+        <Section/>
+        <JoinUs/>
+        <div className="upTo">
+            <button>
+                <img src={UpTo} alt="" />
+            </button>
         </div>
         <Footer/>
     </div>

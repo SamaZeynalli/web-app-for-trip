@@ -45,8 +45,6 @@
     list-style-type: none;
 }
 
-
-
 .header_menu .header .secondaryHeader .container ul li a {
     color: var(--gray-900, #141D24);
     text-align: center;
@@ -57,6 +55,7 @@
     line-height: 24px; 
     text-decoration: none;
 }
+
 
 .header_menu .header .secondaryHeader .container button {
     display: flex;
@@ -126,14 +125,14 @@
     height: 40px;
 }
 
-.header_menu .header .mainHeader .container .loginBtn {
+.loginBtn {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 16px;
 }
 
-.header_menu .header .mainHeader .container .loginBtn button {
+.loginBtn button {
     color: var(--violet-500, #4A21EF);
     font-family: Inter;
     font-size: 16px;
@@ -150,7 +149,7 @@
     background: var(--primary-white, #FFF);
 }
 
-.header_menu .header .mainHeader .container .loginBtn button:hover {
+.loginBtn button:hover {
     color: var(--primary-white, #FFF);
     font-family: Inter;
     font-size: 16px;

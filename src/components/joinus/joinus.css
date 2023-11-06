@@ -1,0 +1,85 @@
+.joinUs {
+    display: flex;
+    width: 1440px;
+    padding: 120px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.joinUs .joinBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.joinUs .joinBody .joinText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.joinUs .joinBody .joinText span {
+    width: 636px;
+    color: var(--gray-900, #141D24);
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; 
+}
+
+.joinUs .joinBody .joinText p {
+    width: 636px;
+    color: var(--gray-900, #141D24);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    }
+
+
+.joinUs .joinBody .inputButton {
+    display: flex;
+    width: 392px;
+    padding: 8px 8px 8px 24px;
+    align-items: center;
+    gap: 24px;
+    border-radius: 99px;
+    border: 1px solid var(--gray-200, #C9D2DA);
+    background: var(--primary-white, #FFF);
+}
+
+.joinUs .joinBody .inputButton input {
+    color: var(--gray-300, #97A5B2);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    border: none;
+    padding: 8px 16px;
+}
+
+.joinUs .joinBody .inputButton button {
+    color: var(--primary-white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 24px;
+    background: var(--violet-500, #4A21EF);
+    border: none;
+}

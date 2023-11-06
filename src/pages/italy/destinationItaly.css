@@ -1,0 +1,100 @@
+.picture2 {
+    background-image: url('../../components/IMG/Italy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 23.1%, rgba(0, 0, 0, 0.20) 100%),  cover no-repeat;
+}
+
+.statistika {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.statistika .frames {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border-right: 1px solid var(--primary-white, #FFF);
+}
+
+.statistika .frames svg {
+    width: 24px;
+    height: 24px;
+}
+
+.statistika .frames .part1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.statistika .frames .part1 h3 {
+    color: var(--primary-white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+}
+
+.statistika .frames .part1 div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.statistika .frames .part1 div p {
+    color: var(--primary-white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.italyTop {
+    padding-top: 120px;
+}
+
+.map {
+    background-image: url('../../components/IMG/Map\ Italy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 700px;
+}
+
+.map .thing {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px 20px 0px 0px;
+    background: url('../../components/IMG/Image\ placeholder.png'), lightgray 50% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.map .thing .blockTrip {
+    border-radius: 0px 0px 15px 15px;
+    border-right: 1px solid var(--gray-100, #E3E7EB);
+    border-bottom: 1px solid var(--gray-100, #E3E7EB);
+    border-left: 1px solid var(--gray-100, #E3E7EB);
+    background: var(--primary-white, #FFF);
+}
+
+.map .thing .blockTrip p {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+
+
+

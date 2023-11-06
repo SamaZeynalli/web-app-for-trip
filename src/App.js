@@ -3,8 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import Header from './components/header/Header';
 import Layout from './components/Layout/Layout';
 import About from './pages/about/aboutus';
-import Country from './pages/country/index';
+import Country from './pages/destination/Destination';
 import Homepage from './pages/homepage/Homepage';
+import Destinations from './pages/destination/Destination';
+import Italy from './pages/italy/Italy';
 
 function App() {
   return (
@@ -12,14 +14,12 @@ function App() {
       <BrowserRouter>
         <Routes>
         <Route path="/" element={<Homepage/>} />
-          <Route path='about' element={<About/>
-          } />
-
-          <Route path='destination'>
-            <Route index element={<h1>Destination</h1>}/>  
-            {/* (bunlari sonradan component kimi elave etmek ){<h1>Destination</h1>} yerine {<Destination/>>} */}
+        <Route path='/about' element={<About/>} />
+        <Route path='/destinations' element={<Destinations/>} />
+          <Route path='/destinations'> 
             <Route path=":country" element={<Layout><Country/></Layout>}/>
           </Route>
+          <Route path="/destinations/Italy" element={<Italy />} />
         </Routes>
       </BrowserRouter>
     </div>
