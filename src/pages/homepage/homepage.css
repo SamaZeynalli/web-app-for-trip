@@ -248,6 +248,9 @@ h1 {
     align-items: flex-start;
     gap: 8px;
     flex: 1 0 0;
+}
+
+.whyUsSection .whyUs .reasons .reason .text2 span {
     color: var(--gray-900, #141D24);
     font-family: Inter;
     font-size: 16px;

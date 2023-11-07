@@ -218,6 +218,9 @@ const Country = () => {
                                         <p>Trip crafted by</p>
                                         <div className="name">
                                         <span>Tiago</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="11.5" y="2" width="1" height="20" rx="0.5" fill="#C9D2DA"/>
+                                        </svg>
                                         <p>Local expert in Portugal</p>
                                         </div>
                                 </div>

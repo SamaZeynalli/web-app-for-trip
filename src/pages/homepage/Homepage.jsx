@@ -200,7 +200,7 @@ function Homepage() {
                 </div>
             </div>
         </div>
-        <div className="trendingSection">
+        <div className="trendingSection ">
             <div className="trendingNow">
                 <h2>Trending now</h2>
                 <div className="tripPlans">
@@ -222,19 +222,19 @@ function Homepage() {
         </div>
         <div className="whyUsSection">
         <div className="whyUs">
-            <h2>Our Local Experts</h2>
+            <h2>Why us?</h2>
             <div className="reasons">
                 <div className="reason">
                     <div className="image"> <img src={Map} alt="" /></div>
-                    <div className="text2">More than 149 travel titles currently in print</div>
+                    <div className="text2"> <span>More than 149 travel titles currently in print</span></div>
                 </div>
                 <div className="reason">
                     <div className="image"> <img src={Baggage} alt="" /></div>
-                    <div className="text2">Supporting millions of travellers since 1982</div>
+                    <div className="text2"> <span>Supporting millions of travellers since 1982</span></div>
                 </div>
                 <div className="reason">
                     <div className="image"> <img src={Person} alt="" /></div>
-                    <div className="text2">Our utstanding customer satisfaction</div>
+                    <div className="text2"> <span>Our utstanding customer satisfaction </span></div>
                 </div>
             </div>
         </div>
@@ -274,6 +274,9 @@ function Homepage() {
                         <p>Trip crafted by</p>
                         <div className="name">
                             <span>Tiago</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="11.5" y="2" width="1" height="20" rx="0.5" fill="#C9D2DA"/>
+                            </svg>
                             <p>Local expert in Portugal</p>
                         </div>
                     </div>
