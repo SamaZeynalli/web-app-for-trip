@@ -1,0 +1,117 @@
+.video_blog {
+    background-image: url('../../components/IMG/BLOG.png');
+}
+
+.categories {
+    display: flex;
+    padding: 72px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.categories .link a {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-700, #3A4D5A);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    border-radius: 100px;
+    background: var(--gray-50, #F5F7FA);
+    text-decoration: none;
+}
+
+.categories .link a:hover {
+    display: flex;
+    padding: 12px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--primary-white, #FFF);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    border-radius: 100px;
+    background: var(--violet-500, #4A21EF);
+}
+
+.blogArticlesSection {
+    display: flex;
+    padding: 0px 72px 120px 72px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.blogArticlesSection .blogArticles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.blogArticlesSection .blogArticles .attractions {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.blogArticlesSection .blogArticles .attractions .trip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 20px 20px 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blogArticlesSection .blogArticles .attractions .trip .texts {
+    border-radius: 0px 0px 15px 15px;
+    border-right: 1px solid var(--gray-100, #E3E7EB);
+    border-bottom: 1px solid var(--gray-100, #E3E7EB);
+    border-left: 1px solid var(--gray-100, #E3E7EB);
+    background: var(--primary-white, #FFF);
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.blogArticlesSection .blogArticles .attractions .trip .texts h3 {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.blogArticlesSection .blogArticles .attractions .trip .texts p {
+    overflow: hidden;
+    color: var(--gray-900, #141D24);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+
+

@@ -103,12 +103,13 @@
     line-height: 20px; 
 }
 
-
 .priceButton button {
     display: flex;
     width: 384px;
     justify-content: space-between;
     align-items: flex-start;
+    border: none;
+    background: none;
 }
 
 .priceButton button .days {

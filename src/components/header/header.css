@@ -5,23 +5,8 @@
     cursor: pointer;
 }
 
-.header_menu {
+.header .secondaryHeader {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.header_menu .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.header_menu .header .secondaryHeader {
-    display: flex;
-    width: 1440px;
-    height: 48px;
     padding: 0px 72px;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +14,7 @@
     background: var(--gray-50, #F5F7FA);
 }
 
-.header_menu .header .secondaryHeader .container {
+.header .secondaryHeader .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,15 +22,14 @@
     align-self: stretch;
 }
 
-.header_menu .header .secondaryHeader .container ul {
+.header .secondaryHeader .container ul {
     display: flex;
-    width: 285px;
     align-items: center;
     gap: 30px;
     list-style-type: none;
 }
 
-.header_menu .header .secondaryHeader .container ul li a {
+.header .secondaryHeader .container ul li a {
     color: var(--gray-900, #141D24);
     text-align: center;
     font-family: Inter;
@@ -57,23 +41,53 @@
 }
 
 
-.header_menu .header .secondaryHeader .container button {
+.currency-button-container {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 0px 0px 15px 15px;
+    background: #F5F7FA;
+  }
+  
+  .currency-button {
     display: flex;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 16px;
     justify-content: center;
     align-items: center;
     gap: 8px;
     border-radius: 24px;
-}
-
-
-
-
-
-.header_menu .header .mainHeader {
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  .currency-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
     display: flex;
-    width: 1440px;
-    height: 100px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 0px 0px 15px 15px;
+    background: #F5F7FA;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .currency-option {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .currency-option:hover {
+    background-color: #E5E7EB;
+  }
+
+
+.header .mainHeader {
+    display: flex;
     padding: 0px 72px;
     flex-direction: column;
     align-items: flex-start;
@@ -81,7 +95,7 @@
 }
 
 
-.header_menu .header .mainHeader .container {
+.header .mainHeader .container {
     display: flex;
     padding: 21px 0px;
     justify-content: space-between;
@@ -90,22 +104,21 @@
     align-self: stretch;
 }
 
-.header_menu .header .mainHeader .container .menu {
+.header .mainHeader .container .menu {
     display: flex;
-    width: 224px;
     padding-right: 0px;
     align-items: center;
     gap: 31.82px;
 }
 
-.header_menu .header .mainHeader .container .menu .link {
+.header .mainHeader .container .menu .link {
     display: flex;
     padding: 12px 0px;
     flex-direction: column;
     align-items: center;
 }
 
-.header_menu .header .mainHeader .container .menu .link a {
+.header .mainHeader .container .menu .link a {
     color: var(--violet-900, #0F0339);
     text-align: center;
     font-family: Inter;
@@ -116,13 +129,8 @@
     text-decoration: none;
 }
 
-.header_menu .header .mainHeader .container .menu .link a:active {
+.header .mainHeader .container .menu .link a:active {
     color: var(--violet-500, #4A21EF);
-}
-
-.header_menu .header .mainHeader .container .myImage {
-    width: 160px;
-    height: 40px;
 }
 
 .loginBtn {
@@ -138,7 +146,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 150% */
+    line-height: 24px; 
     display: flex;
     padding: 12px 24px;
     justify-content: center;
@@ -151,17 +159,6 @@
 
 .loginBtn button:hover {
     color: var(--primary-white, #FFF);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 150% */
-    display: flex;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 24px;
     background: var(--violet-500, #4A21EF);
 }
 

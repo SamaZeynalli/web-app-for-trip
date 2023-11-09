@@ -8,6 +8,9 @@ import Homepage from './pages/homepage/Homepage';
 import Destinations from './pages/destination/Destination';
 import Italy from './pages/italy/Italy';
 import FAQ from './pages/FAQ/faq';
+import BLOG from './pages/blog/Blog';
+import CONTACT from './pages/contact/Contact';
+import LOGIN from './pages/login/Login';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path='/about' element={<About/>} />
         <Route path='/FAQ' element={<FAQ/>} />
         <Route path='/destinations' element={<Destinations/>} />
+        <Route path='/blog' element={<BLOG/>} />
+        <Route path='/Contactus' element={<CONTACT/>} />
+        <Route path='/login' element={<LOGIN/>} />
           <Route path='/destinations'> 
             <Route path=":country" element={<Layout><Country/></Layout>}/>
           </Route>

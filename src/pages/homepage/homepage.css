@@ -58,24 +58,14 @@ h3 {
     gap: 16px;
 }
 
-.trips {
-    display: flex;
-    padding: 0px 54px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 1332px;
-    height: 672px;
-    padding: 0px 420px;
-    border-radius: 20px;
-
-}
 
 .picture1 {
-    background-image: url('../../components/IMG/Video\ placeholder.png');
+    margin: 0px 54px;
+    background-image: url('../../components/IMG/video1.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: linear-gradient(0deg, rgba(20, 29, 36, 0.20) 0%, rgba(20, 29, 36, 0.20) 100%);
+    border-radius: 20px;
 }
 
 .trips .text1 {
@@ -84,6 +74,7 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 60px;
+    padding: 228px;
 }
 
 .texts {
@@ -115,7 +106,6 @@ h1 {
 
 .trips .text1 .search {
     display: flex;
-    width: 392px;
     padding: 8px 8px 8px 24px;
     align-items: center;
     justify-content: space-between;
@@ -137,7 +127,6 @@ h1 {
 
 .trips .text1 .search button {
     display: flex;
-    width: 40px;
     padding: 8px 16px;
     justify-content: center;
     align-items: center;
@@ -148,26 +137,13 @@ h1 {
     border: none;
 }
 
-.trips .text1 .search button img {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-
-}
-
-
-.trendingSection {
-    display: flex;
-    padding: 120px 72px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.trendingSection .trendingNow {
+.trend_section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    padding: 120px 72px;
+    justify-content: space-between;
 }
 
 .brand {
@@ -215,7 +191,6 @@ h1 {
 
 .whyUsSection .whyUs .reasons .reason {
     display: flex;
-    width: 416px;
     padding: 32px;
     align-items: center;
     gap: 16px;
@@ -225,8 +200,6 @@ h1 {
 
 .whyUsSection .whyUs .reasons .reason .image {
     display: flex;
-    width: 60px;
-    height: 60px;
     padding: 18px;
     justify-content: center;
     align-items: center;

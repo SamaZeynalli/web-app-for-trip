@@ -4,7 +4,6 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 
 const FAQ = () => {
-    
     return(
         <div>
             <Header/>
@@ -12,20 +11,6 @@ const FAQ = () => {
                 <div className="texts">
                     <h1>FAQ</h1>
                     <p>Unlocking the Mysteries of Travel: Your Questions, Our Journey.</p>
-                </div>
-            </div>
-            <div className="faq_section">
-                <div className="content">
-                    <div className="questions">
-                        <ul>
-                            <li>
-                                <div className="number">01</div>
-                                <div className="content">
-
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <Footer/>

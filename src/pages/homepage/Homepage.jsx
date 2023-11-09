@@ -30,159 +30,183 @@ import UpTo from '../../components/IMG/Arrow_Up_SM.png'
 import JoinUs from "../../components/joinus/JoinUs";
 import Section from "../../components/elsewheresection/Section";
 
+
+const TripCard = ({ data }) => {
+    const { image, showLovebutton, LoveImg, love, showSavebutton, SaveImg, title, description, days, from, price } = data;
+
+    return (
+        <Card
+          image={image}
+          showLovebutton={showLovebutton}
+          LoveImg={LoveImg}
+          love={love}
+          showSavebutton={showSavebutton}
+          SaveImg={SaveImg}
+          title={title}
+          description={description}
+          days={days}
+          from={from}
+          price={price}
+        />
+      );
+    };
+
+
 function Homepage() {
 
     const divStyle = {
         backgroundImage: `url(${BackImg})`
       };
+    const tripsData = [
+        {
+            image: Trend1,
+            showLovebutton: true,
+            LoveImg: LoveImg1,
+            love: 'Loved by over 40s' ,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'SPAIN TRIP',
+            description:'Magical Madrid To Marrakech By Train',
+            days:'12 days',
+            from:'from',
+            price:'$1299.00'
+        },
+        {
+            image: Trend2,
+            showLovebutton: true,
+            LoveImg: LoveImg2,
+            love: 'Loved by couples' ,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'ITALY TRIP',
+            description:'Spectacular Sicily',
+            days:'5 days',
+            from:'from',
+            price:'$250.00'
+        },
 
-    const card1Props = {
-        image: Trend1,
-        showLovebutton: true,
-        LoveImg: LoveImg1,
-        love: 'Loved by over 40s' ,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'SPAIN TRIP',
-        description:'Magical Madrid To Marrakech By Train',
-        days:'12 days',
-        from:'from',
-        price:'$1299.00'
-    }
+        {
+            image: Trend3,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'TURKEY TRIP',
+            description:'International Istanbul',
+            days:'7 days',
+            from:'from',
+            price:'$400.00'
+        },
 
-    const card2Props = {
-        image: Trend2,
-        showLovebutton: true,
-        LoveImg: LoveImg2,
-        love: 'Loved by couples' ,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'ITALY TRIP',
-        description:'Spectacular Sicily',
-        days:'5 days',
-        from:'from',
-        price:'$250.00'
-    }
+        {
+            image: Trend4,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'SPAIN TRIP',
+            description:'Magical Madrid To Marrakech By Train',
+            days:'12 days',
+            from:'from',
+            price:'$1299.00'
+        },
 
-    const card3Props = {
-        image: Trend3,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'TURKEY TRIP',
-        description:'International Istanbul',
-        days:'7 days',
-        from:'from',
-        price:'$400.00'
-    }
+        {
+            image: Trend5,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'ITALY TRIP',
+            description:'Spectacular Sicily',
+            days:'5 days',
+            from:'from',
+            price:'$250.00'
+        },
 
-    const card4Props = {
-        image: Trend4,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'SPAIN TRIP',
-        description:'Magical Madrid To Marrakech By Train',
-        days:'12 days',
-        from:'from',
-        price:'$1299.00'
-    }
+        {
+            image: Trend6,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'TURKEY TRIP',
+            description:'International Istanbul',
+            days:'7 days',
+            from:'from',
+            price:'$400.00'
+        },
 
-    const card5Props = {
-        image: Trend5,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'ITALY TRIP',
-        description:'Spectacular Sicily',
-        days:'5 days',
-        from:'from',
-        price:'$250.00'
-    }
+        {
+            image: Trend7,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'ICELAND TRIP',
+            description:'Volcanic Iceland',
+            days:'7 days',
+            from:'from',
+            price:'$2299.00'
+        },
 
-    const card6Props = {
-        image: Trend6,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'TURKEY TRIP',
-        description:'International Istanbul',
-        days:'7 days',
-        from:'from',
-        price:'$400.00'
-    }
+        {
+            image: Trend8,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'SCOTLAND TRIP',
+            description:'The Scottish Highlands',
+            days:'7 days',
+            from:'from',
+            price:'$1687.00'
+        },
 
-    const card7Props = {
-        image: Trend7,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'ICELAND TRIP',
-        description:'Volcanic Iceland',
-        days:'7 days',
-        from:'from',
-        price:'$2299.00'
-    }
+        {
+            image: Trend9,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'Atlantic Azores',
+            description:'International Istanbul',
+            days:'6 days',
+            from:'from',
+            price:'$1220.00'
+        },
 
-    const card8Props = {
-        image: Trend8,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'SCOTLAND TRIP',
-        description:'The Scottish Highlands',
-        days:'7 days',
-        from:'from',
-        price:'$1687.00'
-    }
+        {
+            image: Trend10,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'CHINA TRIP',
+            description:'Icons Of China',
+            days:'5 days',
+            from:'from',
+            price:'$1399.00'
+        },
 
-    const card9Props = {
-        image: Trend9,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'Atlantic Azores',
-        description:'International Istanbul',
-        days:'6 days',
-        from:'from',
-        price:'$1220.00'
-    }
+        {
+            image: Trend11,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'THAILAND TRIP',
+            description:'Cambodia & Vietnam',
+            days:'7 days',
+            from:'from',
+            price:'$2350.00'
+        },
 
-    const card10Props = {
-        image: Trend10,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'CHINA TRIP',
-        description:'Icons Of China',
-        days:'5 days',
-        from:'from',
-        price:'$1399.00'
-    }
+        {
+            image: Trend12,
+            showLovebutton: false,
+            showSavebutton: true,
+            SaveImg: Save,
+            title: 'TAIWAN TRIP',
+            description:'A Taste Of Taiwan',
+            days:'7 days',
+            from:'from',
+            price:'$1900.00'
+        },
+    ];
 
-    const card11Props = {
-        image: Trend11,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'THAILAND TRIP',
-        description:'Cambodia & Vietnam',
-        days:'7 days',
-        from:'from',
-        price:'$2350.00'
-    }
 
-    const card12Props = {
-        image: Trend12,
-        showLovebutton: false,
-        showSavebutton: true,
-        SaveImg: Save,
-        title: 'TAIWAN TRIP',
-        description:'A Taste Of Taiwan',
-        days:'7 days',
-        from:'from',
-        price:'$1900.00'
-    }
 
 
     return (
@@ -200,23 +224,21 @@ function Homepage() {
                 </div>
             </div>
         </div>
-        <div className="trendingSection ">
-            <div className="trendingNow">
+        <div className="trend_section">
                 <h2>Trending now</h2>
                 <div className="tripPlans">
-                    <Card {...card1Props}/>
-                    <Card {...card2Props} />
-                    <Card {...card3Props} />
+                    {tripsData.slice(0, 3).map((trip, index) => (
+                    <TripCard key={index} data={trip} />
+                ))}
                 </div>
-            </div>
         </div>
         <div className="brand">
             <div className="brandNew">
                 <h2>Brand new trips</h2>
                 <div className="tripPlans">
-                    <Card {...card4Props}/>
-                    <Card {...card5Props} />
-                    <Card {...card6Props} />
+                    {tripsData.slice(3, 6).map((trip, index) => (
+                    <TripCard key={index} data={trip} />
+                ))}
                 </div>
             </div>
         </div>
@@ -287,9 +309,9 @@ function Homepage() {
             <div className="europe_main">
                 <h2>Europe</h2>
                 <div className="tripPlans">
-                    <Card {...card7Props}/>
-                    <Card {...card8Props} />
-                    <Card {...card9Props} />
+                    {tripsData.slice(6, 9).map((trip, index) => (
+                    <TripCard key={index} data={trip} />
+                ))}
                 </div>
             </div>
         </div>
@@ -297,9 +319,9 @@ function Homepage() {
             <div className="asia_main">
                 <h2>Asia</h2>
                 <div className="tripPlans">
-                    <Card {...card10Props}/>
-                    <Card {...card11Props} />
-                    <Card {...card12Props} />
+                    {tripsData.slice(9, 12).map((trip, index) => (
+                    <TripCard key={index} data={trip} />
+                ))}
                 </div>
             </div>
         </div>

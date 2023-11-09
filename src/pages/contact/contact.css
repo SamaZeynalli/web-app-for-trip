@@ -1,0 +1,61 @@
+.video_contact {
+    background-image: url('../../components/IMG//CONTACTUS.png');
+}
+
+.contacts_section {
+    display: flex;
+    padding: 120px 174px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.contacts_section .contacts {
+    display: flex;
+    gap: 24px;
+}
+
+.contacts_section .contacts .content_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 1 0px;
+}
+
+.contacts_section .contacts .content_contact  h2 {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px; 
+}
+
+.ads {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.ads p {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+.ads span {
+    color: var(--violet-500, #4A21EF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+
+
