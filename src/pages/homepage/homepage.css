@@ -34,15 +34,17 @@ h3 {
     line-height: 48px;
 }
 
-
-.texts p {
-    color: var(--primary-white, #FFF);
-    text-align: center;
+p {
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
+}
+
+.texts p {
+    color: var(--primary-white, #FFF);
+    text-align: center;
 }
 
 .tripPlans {
@@ -147,24 +149,11 @@ h1 {
 }
 
 .brand {
-    display: flex;
     padding: 0px 72px 120px 72px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.brand .brandNew {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-}
-
-
-.brand .brandNew .trendTrip {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
 }
 
 
@@ -172,24 +161,18 @@ h1 {
     display: flex;
     padding: 0px 72px 120px 72px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.whyUsSection .whyUs {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 40px;
 }
 
-.whyUsSection .whyUs .reasons {
+
+.whyUsSection .reasons {
     display: flex;
     align-items: flex-start;
     gap: 24px;  
 }
 
-.whyUsSection .whyUs .reasons .reason {
+.whyUsSection .reasons .reason {
     display: flex;
     padding: 32px;
     align-items: center;
@@ -198,7 +181,7 @@ h1 {
     background: var(--gray-50, #F5F7FA);
 }
 
-.whyUsSection .whyUs .reasons .reason .image {
+.whyUsSection .reasons .reason .image {
     display: flex;
     padding: 18px;
     justify-content: center;
@@ -208,119 +191,26 @@ h1 {
     background: var(--violet-500, #4A21EF);
 }
 
-.whyUsSection .whyUs .reasons .reason .image img {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-}
 
-.whyUsSection .whyUs .reasons .reason .text2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
-    flex: 1 0 0;
-}
-
-.whyUsSection .whyUs .reasons .reason .text2 span {
+.whyUsSection .reasons .reason .text2 span {
     color: var(--gray-900, #141D24);
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-}
-
-.localExperts {
-    display: flex;
-    padding: 0px 72px 120px 72px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.localExperts .experts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-.localExperts .experts .ourExperts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.localExperts .experts .ourExperts .frame {
-    width: 1296px;
-    height: 380px;
-}
-
-.localExperts .experts .ourExperts .frame .callcenter {
-    display: inline-flex;
-    height: 336px;
-    padding-right: 0px;
-    align-items: center;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.localExperts .experts .ourExperts .frame .callcenter1 {
-    display: inline-flex;
-    height: 336px;
-    padding-left: 0px;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-
-.localExperts .experts .ourExperts .frame img {
-    width: 578.149px;
-    height: 336px;
-    fill: lightgray 50% / cover no-repeat;
-}
-
-
-
-.localExperts .experts .ourExperts .frame p {
-    width: 212px;
-    color: var(--gray-900, #141D24);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; 
-}
-
-.localExperts .experts .ourExperts .frame .text3 {
-    color: var(--gray-900, #141D24);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    width: 212px;
-    fill: var(--primary-white, #FFF);
-    background-image: url(../../components/IMG/Vector1.png);
-    position: absolute;
-}
-
-.localExperts .experts .ourExperts .frame .text4 {
-    color: var(--gray-900, #141D24);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    width: 212px;
 }
 
 .review {
-    width: 1440px;
     height: 800px;
     position: relative;
+    background-image: url(../../components/IMG/review.png);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
 }
 
 .review .reviewText {
@@ -335,7 +225,6 @@ h1 {
 
 .review .reviewText .review1 {
     display: flex;
-    width: 416px;
     padding: 24px 32px;
     flex-direction: column;
     align-items: flex-start;
@@ -346,9 +235,7 @@ h1 {
 .review .reviewText .review1 .comment {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 8px;
-    align-self: stretch;
 }
 
 .review .reviewText .review1 .comment p {
@@ -372,15 +259,10 @@ h1 {
     line-height: 24px; 
 }
 .review .reviewText .review1 .testimonial {
-    display: flex;
     padding: 10px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
 }
 
 .review .reviewText .review1 .testimonial p {
-    max-width: 345px;
     color: var(--gray-400, #788795);
     font-family: Inter;
     font-size: 12px;
@@ -389,15 +271,7 @@ h1 {
     line-height: 16px; 
 }
 
-.review .reviewText .review1 .regionName {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
 .review .reviewText .review1 .regionName p {
-    max-width: 345px;
     color: var(--gray-500, #5E6F7D);
     font-family: Inter;
     font-size: 12px;
@@ -417,13 +291,7 @@ h1 {
 }
 
 .review .reviewText .reviewMember .local {
-    display: flex;
-    width: 60px;
-    height: 60px;
     padding: 18px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
     border-radius: 100px;
     background: var(--violet-500, #4A21EF);
 }
@@ -437,8 +305,6 @@ h1 {
 .review .reviewText .reviewMember .expertName {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     gap: 8px;
 }
 
@@ -454,7 +320,6 @@ h1 {
 
 .review .reviewText .reviewMember .expertName  .name {
     display: flex;
-    align-items: flex-start;
     gap: 4px;
 }
 
@@ -482,50 +347,19 @@ h1 {
     display: flex;
     padding: 120px 72px;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.europe .europe_main {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 40px;
 }
+
 
 .asia {
     display: flex;
     padding: 0px 72px 120px 72px;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.asia .asia_main {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 40px;
 }
 
-.upTo {
-    display: flex;
-    padding: 0px 72px 24px 72px;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 8px;
-}
-
-.upTo button {
-    display: flex;
-    width: 48px;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    border-radius: 24px;
-    background: var(--violet-500, #4A21EF);
-    border: none;
-}
 
 
 

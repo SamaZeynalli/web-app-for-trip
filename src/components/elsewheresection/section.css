@@ -1,31 +1,23 @@
 .section {
     display: flex;
-    width: 1440px;
-    padding: 72px 469px;
-    flex-direction: column;
+    padding: 72px 0;
     justify-content: center;
     align-items: center;
     gap: 8px;
     background: var(--violet-500, #4A21EF);
-}
-
-.section .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 24px;
 }
-.section .body p {
+
+.section  span {
     color: var(--primary-white, #FFF);
     text-align: center;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 40px; 
 }
 
-.section .body button {
+.section  button {
     display: flex;
     padding: 12px 24px;
     justify-content: center;
@@ -36,16 +28,15 @@
     border: none;
 }
 
-.section .body button span {
-    color: var(--violet-500, #4A21EF);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; 
+.section  button:hover {
+    background: var(--violet-500, #4A21EF);
 }
 
-.section .body button img {
-    width: 24px;
-    height: 24px;
+.section  button:hover p {
+    color: var(--primary-white, #FFF);
+}
+
+
+.section  button p {
+    color: var(--violet-500, #4A21EF);
 }

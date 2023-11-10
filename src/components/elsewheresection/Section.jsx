@@ -2,18 +2,16 @@ import React from "react";
 import './section.css';
 import Right from '../../components/IMG/Chevron_Right.png';
 
-const Section = () => {
+const ElseSection = () => {
     return(
         <div className="section">
-            <div className="body">
-                <p>Looking to go elsewhere?</p>
+                <span>Looking to go elsewhere?</span>
                 <button>
-                    <span>Our destinations</span>
+                    <p>Our destinations</p>
                     <img src={Right} alt="" />
                 </button>
-            </div>
         </div>
     )
 }
 
-export default Section;
+export default ElseSection;

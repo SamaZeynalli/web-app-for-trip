@@ -6,7 +6,6 @@ function Card(props) {
     const cardStyle = {
         backgroundImage: `url(${props.image})`,
     };
-
     return (
         <div className="card">
             <div className='cardImg' style={cardStyle}>
