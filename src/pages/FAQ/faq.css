@@ -5,8 +5,84 @@
 
 .faq-section {
     padding: 120px 72px;
-    
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 0 0;
+    justify-content: space-between;
 }
+
+.faq-item {
+    display: flex;
+    padding: 32px 60px;
+    gap: 40px;
+    border-bottom: 1px solid var(--gray-100, #E3E7EB);
+    background: var(--background-bg-primary, #FFF);
+    flex-direction: column;
+}
+
+.question-and-answer  {
+    display: flex;
+    gap: 40px;
+}
+
+.question-and-answer span {
+    color: var(--violet-500, #4A21EF);
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px; 
+}
+
+.question-and-answer .question {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    display: flex;
+}
+
+.question-and-answer .answer {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.question-and-answer .question .button-closed {
+    fill: var(--gray-400, #788795);
+    border-radius: 24px;
+    background: var(--gray-50, #F5F7FA);
+    width: 48px;
+    height: 48px;
+    border: none;
+}
+
+.question-and-answer .question .button-open {
+    fill: var(--primary-white, #FFF);
+    border-radius: 24px;
+    background: var(--violet-500, #4A21EF);
+    width: 48px;
+    height: 48px;
+    border: none;
+}
+
+.button-container {
+    text-align: right;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+
+
+
+
 
 
 

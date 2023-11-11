@@ -46,19 +46,7 @@
 }
 
 .blogArticlesSection {
-    display: flex;
     padding: 0px 72px 120px 72px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.blogArticlesSection .blogArticles {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
 }
 
 .blogArticlesSection .blogArticles .attractions {
@@ -72,11 +60,12 @@
 .blogArticlesSection .blogArticles .attractions .trip {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     flex-shrink: 0;
     border-radius: 20px 20px 0px 0px;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
+    max-width: 636px;
 }
 
 .blogArticlesSection .blogArticles .attractions .trip .texts {
@@ -85,11 +74,10 @@
     border-bottom: 1px solid var(--gray-100, #E3E7EB);
     border-left: 1px solid var(--gray-100, #E3E7EB);
     background: var(--primary-white, #FFF);
-    display: flex;
     padding: 16px;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 12px;
+    flex: 1;
+    display: block;
 }
 
 .blogArticlesSection .blogArticles .attractions .trip .texts h3 {

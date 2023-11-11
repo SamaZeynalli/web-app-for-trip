@@ -60,16 +60,27 @@ const FAQ = () => {
             <div className="faq-section">
                 {faqData.map((item, index) => (
                     <div key={item.id} className="faq-item">
-                        <div className="question">
-                        <span className="question-number">{index + 1}</span>
-                            {item.question}
-                            <button onClick={() => toggleAnswer(item.id)}>
-                                {answersVisible.includes(item.id) ? (<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6569 1.75744L10.2426 0.343227L6 4.58587L1.75736 0.343226L0.343146 1.75744L4.58579 6.00008L0.343146 10.2427L1.75736 11.6569L6 7.41429L10.2426 11.6569L11.6569 10.2427L7.41421 6.00008L11.6569 1.75744Z" fill="white"/>
-                                </svg>) : (<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.5H6V6.5H0V8.5H6V14.5H8V8.5H14V6.5H8V0.5Z" fill="#788795"/>
-                                </svg>)}
-                            </button>
+                        <div className="question-and-answer">
+                            <span className="question-number">{index + 1}</span>
+                            <div className="question">
+                                {item.question}
+                                <div className="button-container">
+                                    <button
+                                        className={`button ${answersVisible.includes(item.id) ? 'button-open' : 'button-closed'}`}
+                                        onClick={() => toggleAnswer(item.id)}
+                                    >
+                                        {answersVisible.includes(item.id) ? (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6569 1.75744L10.2426 0.343227L6 4.58587L1.75736 0.343226L0.343146 1.75744L4.58579 6.00008L0.343146 10.2427L1.75736 11.6569L6 7.41429L10.2426 11.6569L11.6569 10.2427L7.41421 6.00008L11.6569 1.75744Z" fill="white"/>
+                                            </svg>
+                                        ) : (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.5H6V6.5H0V8.5H6V14.5H8V8.5H14V6.5H8V0.5Z" fill="#788795"/>
+                                            </svg>
+                                        )}
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         {answersVisible.includes(item.id) && <div className="answer">{item.answer}</div>}
                     </div>
