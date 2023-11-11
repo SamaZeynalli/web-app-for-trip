@@ -11,6 +11,8 @@ import FAQ from './pages/FAQ/faq';
 import BLOG from './pages/blog/Blog';
 import CONTACT from './pages/contact/Contact';
 import LOGIN from './pages/login/Login';
+import FORGOT from './pages/forgot/Forgot';
+import CREATE from './pages/create/create';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path='/blog' element={<BLOG/>} />
         <Route path='/Contactus' element={<CONTACT/>} />
         <Route path='/login' element={<LOGIN/>} />
+        <Route path='/forgot' element={<FORGOT/>} />
+        <Route path='/create' element={<CREATE/>} />
           <Route path='/destinations'> 
             <Route path=":country" element={<Layout><Country/></Layout>}/>
           </Route>

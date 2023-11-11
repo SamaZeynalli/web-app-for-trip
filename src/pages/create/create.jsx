@@ -1,34 +1,16 @@
 import React from "react";
-import './login.css';
+import './create.css';
 import logo from '../../components/IMG/Logotourist.png';
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Back from '../../components/IMG/loginimg.png';
+import { Link } from "react-router-dom";
 
-const LOGIN = () => {
-    const directToForgot = () => {
-        window.location.href = '/forgot';
-      };
-
-      const directToCreate = () => {
-        window.location.href = '/create';
-      };
+const CREATE = () => {
 
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
 
     const handleInputChange = (e) => {
         setEmail(e.target.value);
-    };
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
-
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
     };
 
     return(
@@ -41,7 +23,7 @@ const LOGIN = () => {
                     </div>
                     <div className="form">
                         <div className="travel_info">
-                            <h2>Sign in for your exciting journey</h2>
+                            <h2>Create an account to start trip planning</h2>
                             <div className="form_info">
                                 <div className="inputs">
                                     <div className="input">
@@ -56,34 +38,14 @@ const LOGIN = () => {
                                                 onChange={handleInputChange}/>
                                             </div>
                                     </div>
-                                    <div className="input">
-                                        <label htmlFor="password">Password</label>
-                                        <div className="input_section">
-                                            <input
-                                            type={showPassword ? 'text' : 'password'}
-                                            id="password"
-                                            name="password"
-                                            placeholder="•••••••••••"
-                                            value={password}
-                                            onChange={handlePasswordChange}
-                                            />
-                                            <FontAwesomeIcon
-                                            icon={showPassword ? faEye : faEyeSlash}
-                                            onClick={togglePasswordVisibility}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="forgot" onClick={directToForgot} >
-                                        <p>Forgot password?</p>
-                                    </div>
                                 </div>
-                                <button>Sign in</button>
+                                <button>Start trip planning</button>
                             </div>
                         </div>
                     </div>
                     <div className="social_section">
                         <div className="social">
-                            <p>or use one of this</p>
+                            <p>Sign up with</p>
                             <div className="social_info">
                                 <div className="google">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -122,7 +84,7 @@ const LOGIN = () => {
                         </div>
                     </div>
                     <div className="frame">
-                        <p>Don’t have an account? <span onClick={directToCreate}>Create one for new adventure!</span></p>
+                        <p>By creating an account, you agree to elsewhere's <Link to="/term" className="link">Terms of Use</Link> and <Link to="/privacy" className="link">Privacy Policy</Link>.</p>
                     </div>
                 </div>
             </div>
@@ -130,4 +92,4 @@ const LOGIN = () => {
     )
 }
 
-export default LOGIN;
+export default CREATE;
