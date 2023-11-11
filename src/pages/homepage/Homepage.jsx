@@ -115,8 +115,8 @@ function Homepage() {
         </div>
         <ElseSection/>
         <JoinUs/>
-        <Footer/>
         <ScrollToTopButton/>
+        <Footer/>
     </div>
   );
 }

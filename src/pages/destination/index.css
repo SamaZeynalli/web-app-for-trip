@@ -1,39 +1,33 @@
-.country_video {
-    display: flex;
-    padding: 0px 54px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 672px;
-    border-radius: 20px;
-    background-image: url(../../components/IMG/video2.gif);
+.picture3 {
+    background-image: url('../../components/IMG/video2.gif');
+    margin: 0px 54px;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 20px;
+    height: 672px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .destination_section {
     display: flex;
     padding: 120px 182px;
-    flex-direction: column;
-}
-
-.destination_section .destination_country {
-    display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 24px;
 }
 
-.destination_section .destination_country .dest_cntry {
+.destination_section .dest_cntry {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 24px;
     border-right: 1px solid var(--gray-100, #E3E7EB);
 }
 
-.destination_section .destination_country .dest_cntry .links {
+.destination_section .dest_cntry .links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -42,7 +36,7 @@
 }
 
 
-.destination_section .destination_country .dest_cntry .links li a  {
+.destination_section .dest_cntry .links li a  {
     text-decoration: none;
     color: var(--gray-900, #141D24);
     font-family: Inter;
@@ -53,15 +47,9 @@
 }
 
 
-.topDestinationSection {
+.brand {
     display: flex;
     padding: 0px 72px 120px 72px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.topDestinationSection .topDestination {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;

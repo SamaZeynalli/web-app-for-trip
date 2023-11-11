@@ -1,12 +1,12 @@
 .upTo {
-    display: flex;
     padding: 0px 72px 24px 72px;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 8px;
+    position: relative;
 }
 
 .upTo button {
+    position: absolute;
+    right: 72px;
+    bottom: 24px;
     display: flex;
     width: 48px;
     padding: 12px 24px;

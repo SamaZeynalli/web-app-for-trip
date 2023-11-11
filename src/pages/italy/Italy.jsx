@@ -4,97 +4,21 @@ import Header from "../../components/header/Header";
 import JoinUs from "../../components/joinus/JoinUs";
 import Footer from "../../components/footer/Footer";
 import Section from "../../components/elsewheresection/Section";
-import Card from "../../components/cards/Card";
-import Trend13 from '../../components/IMG/Trend13.png';
-import Trend14 from '../../components/IMG/Trend14.png';
-import Trend15 from '../../components/IMG/Trend15.png';
-import Trend16 from '../../components/IMG/Trend16.png';
-import Trend17 from '../../components/IMG/Trend17.png';
-import Trend18 from '../../components/IMG/Trend18.png';
 import vatikan from '../../components/IMG/vatikan.png';
 import Colosseum from '../../components/IMG/colosseum.png';
 import Peter from '../../components/IMG/peters.png';
-import BackImg1 from '../../components/IMG/backimg1.png';
 import Local from '../../components/IMG/Framelocal.png';
+import { TripCard, tripsData } from "../../components/tripcard/Tripcard";
+import mapItaly from '../../components/IMG/Map Italy.png';
+import Italypng from '../../components/IMG/Italy.png';
 
 
 
 const Italy = () => {
-
-    const BackImg = {
-        backgroundImage: `url(${BackImg1})`
-      };
-
-    const card13Props = {
-        image: Trend13,
-        showLovebutton: false,
-        showSavebutton: false,
-        title: 'ITALY TRIP',
-        description:'International Italy',
-        days:'34 available trip plans',
-        from:'Starts from',
-        price:'$199.00'
-    }
-
-    const card14Props = {
-        image: Trend14,
-        showLovebutton: false,
-        showSavebutton: false,
-        title: 'PORTUGAL TRIP',
-        description:'International Portugal',
-        days:'54 available trip plans',
-        from:'Starts from',
-        price:'$250.00'
-    }
-
-    const card15Props = {
-        image: Trend15,
-        showLovebutton: false,
-        showSavebutton: false,
-        title: 'TURKIYE TRIP',
-        description:'International Turkiye',
-        days:'19 available trip plans',
-        from:'Starts from',
-        price:'$400.00'
-    }
-
-    const card16Props = {
-        image: Trend16,
-        showLovebutton: false,
-        showSavebutton: false,
-        title: 'ICELAND TRIP',
-        description:'International Iceland',
-        days:'105 available trip plans',
-        from:'Starts from',
-        price:'$299.00'
-    }
-
-    const card17Props = {
-        image: Trend17,
-        showLovebutton: false,
-        showSavebutton: false,
-        title: 'COSTA RICA TRIP',
-        description:'International Costa Rica',
-        days:'23 available trip plans',
-        from:'FrStarts fromom',
-        price:'$250.00'
-    }
-
-    const card18Props = {
-        image: Trend18,
-        showLovebutton: false,
-        showSavebutton: false,
-        title: 'ARGENTINA TRIP',
-        description:'International Argentina',
-        days:'87 available trip plans',
-        from:'Starts from',
-        price:'$400.00'
-    }
     return (
         <div>
             <Header />
-            <div className="trips picture2">
-                <div className="text1">
+            <div className="picture2">
                     <div className="texts">
                         <h1>Italy</h1>
                         <p>Trips you couldn't plan, even if you wanted to..</p>
@@ -205,107 +129,115 @@ const Italy = () => {
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
-            <div className="topDestinationSection italyTop">
-                        <div className="topDestination">
-                                <h2>Top Destinations</h2>
+            <div className="italyTop">
+                                <h2>Available trips</h2>
                                 <div className="tripPlans">
-                                        <Card {...card13Props}/>
-                                        <Card {...card14Props} />
-                                        <Card {...card15Props} />
+                                        {tripsData.slice(18, 21).map((trip, index) => (
+                                        <TripCard key={index} data={trip} />
+                                        ))}
                                 </div>
                                 <div className="tripPlans">
-                                        <Card {...card16Props}/>
-                                        <Card {...card17Props} />
-                                        <Card {...card18Props} />
-                                </div>
+                                        {tripsData.slice(21, 24).map((trip, index) => (
+                                        <TripCard key={index} data={trip} />
+                                        ))}
                         </div>
             </div>
             <div className="map">
-                <div className="thing">
-                    <div className="blockTrip">
-                        <p>Have the drive of your life on the cliff roads of the AAmalfi Coast</p>
+                <div className="italymap">
+                    <img src={mapItaly} alt="" />
+                </div>
+                <div className="head">
+                    <p>Tops things to do</p>
+                    <div>
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 19L8 12L15 5" stroke="#141D24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 5L16 12L9 19" stroke="#141D24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+                <div className="thing">
+                    <img src={Italypng} alt="" />
+                    <p>Have the drive of your life on the cliff roads of the AAmalfi Coast</p>
+                </div>
             </div>
-            <div className="topDestinationSection italyTop">
-                        <div className="topDestination">
+            <div className="TopDestination">
                                 <h2>Must-see attractions for your itinerary</h2>
                                 <div className="forYou">
                                         <div className="trip">
                                             <img src={vatikan} alt="" />
-                                            <div>
+                                            <div className="trip_text">
                                                 <span>Vatican museums</span>
                                                 <p>Founded by Pope Julius II in the early 16th century and enlarged by successive pontiffs, the Vatican Museums boast one of the world's greatest art…</p>
                                             </div>
                                         </div>
                                         <div className="trip">
                                             <img src={Colosseum} alt="" />
-                                            <div>
+                                            <div className="trip_text">
                                                 <span>Colosseum</span>
                                                 <p>Everyone wants to see the Colosseum, and it doesn’t disappoint, especially if accompanied by tales of armored gladiators and hungry lions. More...</p>
                                             </div>
                                         </div>
                                         <div className="trip">
                                             <img src={Peter} alt="" />
-                                            <div>
+                                            <div className="trip_text">
                                                 <span>St Peter’s basilica</span>
                                                 <p>In the city of outstanding churches, none can hold a candle to St Peter's, Italy’s largest, richest and most spectacular basilica. Built atop a 4th…</p>
                                             </div>
                                         </div>
                                 </div>
-                        </div>
             </div>
-            <div className="review" style={BackImg}>
+            <div className="review1">
                 <div className="reviewText">
-                    <div className="review1">
                         <div className="comment">
                             <h6>“Tiago put together an epic itinerary for me and my friends. He showed us some hidden hiking trails and amazing local food spots. He even met us for a coffee to make sure we had everything we needed.</h6>
                         </div>
-                    </div>
-                    <div className="reviewMember">
-                        <div className="local">
-                            <img src={Local} alt="" />
-                        </div>
-                        <div className="expertName">
-                            <p>Vivian Lim</p>
-                            <div className="name">
-                                <div className="stars">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
-                                    </svg>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
-                                    </svg>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
-                                    </svg>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
-                                    </svg>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9202 3.48086L12.4431 6.52315C12.5923 6.82182 12.8804 7.02892 13.2145 7.07684L16.6211 7.5672C17.4628 7.68872 17.7977 8.70881 17.1886 9.2933L14.7252 11.6604C14.4831 11.8932 14.3729 12.2278 14.4301 12.5564L15.0115 15.8982C15.1547 16.7249 14.2748 17.3556 13.5225 16.9645L10.4777 15.3856C10.1792 15.2307 9.82168 15.2307 9.52232 15.3856L6.4775 16.9645C5.72519 17.3556 4.84533 16.7249 4.98937 15.8982L5.56987 12.5564C5.62714 12.2278 5.51694 11.8932 5.27485 11.6604L2.8114 9.2933C2.20226 8.70881 2.5372 7.68872 3.37889 7.5672L6.78554 7.07684C7.11961 7.02892 7.40856 6.82182 7.55781 6.52315L9.07979 3.48086C9.45638 2.72863 10.5436 2.72863 10.9202 3.48086Z" stroke="#4A21EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-
-
-                                </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect x="11.5" y="2" width="1" height="20" rx="0.5" fill="#C9D2DA"/>
-                                </svg>
-                                <p>18 June 2024</p>
+                        <div className="reviewMember">
+                            <div className="local">
+                                <img src={Local} alt="" />
                             </div>
-                    </div>
+                            <div className="expertName">
+                                <p>Vivian Lim</p>
+                                <div className="name">
+                                    <div className="stars">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.9317 11.9334C14.7159 12.1426 14.6167 12.4451 14.6659 12.7418L15.4067 16.8418C15.4692 17.1893 15.3226 17.5409 15.0317 17.7418C14.7467 17.9501 14.3676 17.9751 14.0567 17.8084L10.3659 15.8834C10.2376 15.8151 10.0951 15.7784 9.94924 15.7743H9.72341C9.64508 15.7859 9.56841 15.8109 9.49841 15.8493L5.80675 17.7834C5.62425 17.8751 5.41758 17.9076 5.21508 17.8751C4.72175 17.7818 4.39258 17.3118 4.47341 16.8159L5.21508 12.7159C5.26425 12.4168 5.16508 12.1126 4.94925 11.9001L1.94008 8.98344C1.68841 8.73927 1.60091 8.3726 1.71591 8.04177C1.82758 7.71177 2.11258 7.47094 2.45675 7.41677L6.59841 6.81594C6.91341 6.78344 7.19008 6.59177 7.33175 6.30844L9.15674 2.56677C9.20008 2.48344 9.25591 2.40677 9.32341 2.34177L9.39841 2.28344C9.43758 2.2401 9.48258 2.20427 9.53258 2.1751L9.62341 2.14177L9.76508 2.08344H10.1159C10.4292 2.11594 10.7051 2.30344 10.8492 2.58344L12.6984 6.30844C12.8317 6.58094 13.0909 6.7701 13.3901 6.81594L17.5317 7.41677C17.8817 7.46677 18.1742 7.70844 18.2901 8.04177C18.3992 8.37594 18.3051 8.7426 18.0484 8.98344L14.9317 11.9334Z" fill="#4A21EF"/>
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9202 3.48086L12.4431 6.52315C12.5923 6.82182 12.8804 7.02892 13.2145 7.07684L16.6211 7.5672C17.4628 7.68872 17.7977 8.70881 17.1886 9.2933L14.7252 11.6604C14.4831 11.8932 14.3729 12.2278 14.4301 12.5564L15.0115 15.8982C15.1547 16.7249 14.2748 17.3556 13.5225 16.9645L10.4777 15.3856C10.1792 15.2307 9.82168 15.2307 9.52232 15.3856L6.4775 16.9645C5.72519 17.3556 4.84533 16.7249 4.98937 15.8982L5.56987 12.5564C5.62714 12.2278 5.51694 11.8932 5.27485 11.6604L2.8114 9.2933C2.20226 8.70881 2.5372 7.68872 3.37889 7.5672L6.78554 7.07684C7.11961 7.02892 7.40856 6.82182 7.55781 6.52315L9.07979 3.48086C9.45638 2.72863 10.5436 2.72863 10.9202 3.48086Z" stroke="#4A21EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="11.5" y="2" width="1" height="20" rx="0.5" fill="#C9D2DA"/>
+                                    </svg>
+                                    <p>18 June 2024</p>
+                                </div>
+                        </div>
+                        </div>
                 </div>
-            </div>
             </div>
             <div className="whyUsSection italyTop">
                 <div className="whyUs">
-                    <h2>Our Local Experts</h2>
+                    <h2>Expert guidance to help you plan your trip</h2>
                     <div className="reasons">
                         <div className="reason">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

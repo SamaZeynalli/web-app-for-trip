@@ -3,101 +3,23 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import './index.css';
 import { Link } from 'react-router-dom';
-import Card from "../../components/cards/Card";
-import Trend13 from '../../components/IMG/Trend13.png';
-import Trend14 from '../../components/IMG/Trend14.png';
-import Trend15 from '../../components/IMG/Trend15.png';
-import Trend16 from '../../components/IMG/Trend16.png';
-import Trend17 from '../../components/IMG/Trend17.png';
-import Trend18 from '../../components/IMG/Trend18.png';
 import Local from '../../components/IMG/Framelocal.png';
-import BackImg1 from '../../components/IMG/Local1.png';
 import JoinUs from "../../components/joinus/JoinUs";
+import { TripCard, tripsData } from "../../components/tripcard/Tripcard";
 
 const Country = () => {
-
-        const divStyle = {
-                backgroundImage: `url(${BackImg1})`
-              };
-
-        const card13Props = {
-                image: Trend13,
-                showLovebutton: false,
-                showSavebutton: false,
-                title: 'ITALY TRIP',
-                description:'International Italy',
-                days:'34 available trip plans',
-                from:'Starts from',
-                price:'$199.00'
-            }
-
-            const card14Props = {
-                image: Trend14,
-                showLovebutton: false,
-                showSavebutton: false,
-                title: 'PORTUGAL TRIP',
-                description:'International Portugal',
-                days:'54 available trip plans',
-                from:'Starts from',
-                price:'$250.00'
-            }
-
-            const card15Props = {
-                image: Trend15,
-                showLovebutton: false,
-                showSavebutton: false,
-                title: 'TURKIYE TRIP',
-                description:'International Turkiye',
-                days:'19 available trip plans',
-                from:'Starts from',
-                price:'$400.00'
-            }
-
-            const card16Props = {
-                image: Trend16,
-                showLovebutton: false,
-                showSavebutton: false,
-                title: 'ICELAND TRIP',
-                description:'International Iceland',
-                days:'105 available trip plans',
-                from:'Starts from',
-                price:'$299.00'
-            }
-
-            const card17Props = {
-                image: Trend17,
-                showLovebutton: false,
-                showSavebutton: false,
-                title: 'COSTA RICA TRIP',
-                description:'International Costa Rica',
-                days:'23 available trip plans',
-                from:'FrStarts fromom',
-                price:'$250.00'
-            }
-
-            const card18Props = {
-                image: Trend18,
-                showLovebutton: false,
-                showSavebutton: false,
-                title: 'ARGENTINA TRIP',
-                description:'International Argentina',
-                days:'87 available trip plans',
-                from:'Starts from',
-                price:'$400.00'
-            }
 
 
         return(
                 <div>
                 <Header/>
-                <div className="country_video">
+                <div className="picture3">
                         <div className="texts">
                                 <h1>Explore places on Tourista</h1>
                                 <p>Destinations</p>
                         </div>
                 </div>
                 <div className="destination_section">
-                        <div className="destination_country">
                                 <div className="dest_cntry">
                                         <h3>Europe</h3>
                                         <ul className="links">
@@ -178,25 +100,22 @@ const Country = () => {
                                                 <li><Link to="/Destinations/Peru">Peru</Link></li>
                                         </ul>
                                 </div>
-                        </div>
 
                 </div>
-                <div className="topDestinationSection">
-                        <div className="topDestination">
+                <div className="brand">
                                 <h2>Top Destinations</h2>
                                 <div className="tripPlans">
-                                        <Card {...card13Props}/>
-                                        <Card {...card14Props} />
-                                        <Card {...card15Props} />
+                                        {tripsData.slice(12, 15).map((trip, index) => (
+                                        <TripCard key={index} data={trip} />
+                                        ))}
                                 </div>
                                 <div className="tripPlans">
-                                        <Card {...card16Props}/>
-                                        <Card {...card17Props} />
-                                        <Card {...card18Props} />
+                                        {tripsData.slice(15, 18).map((trip, index) => (
+                                        <TripCard key={index} data={trip} />
+                                        ))}
                                 </div>
-                        </div>
                 </div>
-                <div className="review" style={divStyle}>
+                <div className="review">
                         <div className="reviewText">
                                 <div className="review1">
                                 <div className="comment">

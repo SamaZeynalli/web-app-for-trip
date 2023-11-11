@@ -6,8 +6,7 @@ import JoinUs from "../../components/joinus/JoinUs";
 import Footer from "../../components/footer/Footer";
 import Baggage from '../../components/IMG/Frame2.png';
 import Person from '../../components/IMG/Frame3.png';
-import Callcenter from '../../components/IMG/Callcenter.png';
-import Callcenter1 from '../../components/IMG/Callcenter1.png';
+import Experts from '../../components/experts/Experts';
 
 
 const ABOUT = () => {
@@ -47,19 +46,7 @@ const ABOUT = () => {
                     </div>
                 </div>
             </div>
-            <div className="localExperts">
-                <div className="experts">
-                    <h2>Our Local Experts</h2>
-                    <div className="ourExperts">
-                        <div className="frame">
-                                <img src={Callcenter} alt="" className="callcenter"/>
-                                <img src={Callcenter1} alt="" className="callcenter1" />
-                                <p className="text3">Why trust Gary in Florida to plan your trip to South Africa?</p>
-                                <p className="text4">When Angela in Johannesburg knows best.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Experts/>
             <Section/>
             <JoinUs/>
             <Footer/>

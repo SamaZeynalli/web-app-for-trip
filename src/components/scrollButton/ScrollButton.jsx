@@ -3,15 +3,14 @@ import UpTo from '../IMG/Arrow_Up_SM.png';
 import './scrollButton.css';
 
 const ScrollToTopButton = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+    };
+    
     useEffect(() => {
-
-        const scrollToTop = () => {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth',
-            });
-        };
-
       const handleScroll = () => {
         const scrollButton = document.querySelector('.upTo');
 
@@ -23,6 +22,7 @@ const ScrollToTopButton = () => {
               }
             }
         };
+
 
         window.addEventListener('scroll', handleScroll);
 

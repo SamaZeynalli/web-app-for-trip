@@ -1,11 +1,17 @@
 .picture2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 54px;
+    height: 672px;
     background-image: url('../../components/IMG/Italy.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 23.1%, rgba(0, 0, 0, 0.20) 100%),  cover no-repeat;
+    gap: 142px;
 }
 
 .statistika {
+    margin: 0 54px;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -13,7 +19,7 @@
 }
 
 .statistika .frames {
-    display: flex;
+    display: inline-flex;
     align-items: flex-start;
     gap: 16px;
     border-right: 1px solid var(--primary-white, #FFF);
@@ -58,63 +64,111 @@
 
 .italyTop {
     padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .map {
-    background-image: url('../../components/IMG/Map\ Italy.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 1440px;
-    height: 700px;
+    background: var(--gray-50, #F5F7FA);
+    margin-top: 120px;
+    position: relative;
+    
 }
 
-.map .thing {
+.italymap img {
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #97A5B2 0%, rgba(151, 165, 178, 0.00) 100%);
+}
+
+
+
+.head p {
+    color: var(--primary-white, #FFF);
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px; 
+    position: absolute;
+    left: 72px;
+    top: 36px;
+}
+
+.head div {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: absolute;
+    top: 36px;
+    right: 72px;
+}
+
+.head div button {
+    padding: 12px;
+    border-radius: 100px;
+    background: var(--primary-white, #FFF);
+    border: none;
+}
+
+.thing {
+    position: absolute;
+    right: 72px;
+    bottom: 52px;
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.thing img { 
     border-radius: 20px 20px 0px 0px;
-    background: url('../../components/IMG/Image\ placeholder.png'), lightgray 50% ;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 416px;
+    height: 192px;
+
 }
 
-.map .thing .blockTrip {
-    border-radius: 0px 0px 15px 15px;
-    border-right: 1px solid var(--gray-100, #E3E7EB);
-    border-bottom: 1px solid var(--gray-100, #E3E7EB);
-    border-left: 1px solid var(--gray-100, #E3E7EB);
-    background: var(--primary-white, #FFF);
-}
-
-.map .thing .blockTrip p {
+.thing p {
     color: var(--gray-900, #141D24);
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 24px; 
+    padding: 12px 16px;
 }
 
-.topDestinationSection .topDestination .forYou {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-.topDestinationSection .topDestination .forYou .trip {
+.TopDestination {
+    padding: 120px 72px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 40px;
 }
 
-.topDestinationSection .topDestination .forYou .trip img {
+.TopDestination .forYou {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.topDestination .forYou .trip img {
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
 }
 
-.topDestinationSection .topDestination .forYou .trip div {
-    display: flex;
+.trip .trip_text {
     padding: 16px;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
@@ -125,7 +179,8 @@
     background: var(--primary-white, #FFF);
 }
 
-.topDestinationSection .topDestination .forYou .trip div span {
+
+.trip .trip_text span {
     color: var(--gray-900, #141D24);
     font-family: Inter;
     font-size: 16px;
@@ -134,7 +189,7 @@
     line-height: 20px; 
 }
 
-.topDestinationSection .topDestination .forYou .trip div p {
+.trip .trip_text p {
     overflow: hidden;
     color: var(--gray-900, #141D24);
     text-overflow: ellipsis;
@@ -145,54 +200,137 @@
     line-height: 24px;
 }
 
-.review .reviewText .review1 .comment h6 {
+.review1 {
+    background-image: url(../../components/IMG/girl.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 8px;
+    height: 800px;
+    position: relative;
+}
+
+.review1 .reviewText {
+    position: absolute;
+    right: 72px;
+    bottom: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.review1 .reviewText .comment {
+    width: 416px;
+    padding: 24px;
+    border-radius: 20px;
+    background: var(--primary-white, #FFF);
+}
+
+.review1 .reviewText .comment h6 {
     color: var(--gray-900, #141D24);
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; 
-}
-
-.review .reviewText .reviewMember .expertName .name .stars {
-    display: flex;
-    height: 24px;
-    align-items: center;
-}
-
-.review .reviewText .reviewMember .expertName .name p {
-    color: var(--gray-900, #141D24);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 24px;
 }
 
-.whyUsSection .whyUs .reasons .reason .text2 p {
-    color: var(--gray-900, #141D24);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; 
+.review1 .reviewText .reviewMember {
+    padding: 20px 32px;
+    display: flex;
+    gap: 16px;
+    border-radius: 20px;
+    background: var(--primary-white, #FFF);
+    width: 416px;
 }
 
-.whyUsSection .whyUs .reasons .reason svg {
+.review1 .reviewText .reviewMember .local {
+    border-radius: 100px;
+    background: var(--violet-500, #4A21EF);
     display: flex;
     width: 60px;
     height: 60px;
     padding: 18px;
+}
+
+.review1 .reviewText .reviewMember .expertName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.review1 .reviewText .reviewMember .expertName p {
+    color: var(--gray-400, #788795);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.review1 .reviewText .reviewMember .expertName .name {
+    display: flex;
+    gap: 4px;
+}
+
+.whyUs {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.reasons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.reasons .reason {
+    flex: 1;
+    height: 200px;
+}
+
+.reasons .reason svg {
+    border-radius: 100px;
+    background: var(--violet-500, #4A21EF);
+    padding: 18px;
+    width: 60px;
+    height: 60px;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    border-radius: 100px;
-    background: var(--violet-500, #4A21EF);
 }
 
-.whyUsSection .whyUs .reasons .reason {
+.reasons .reason .text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
+    gap: 8px;
 }
+
+.reasons .reason .text2 span {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+}
+
+.reasons .reason .text2 p {
+    color: var(--gray-900, #141D24);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+
 
 
 
