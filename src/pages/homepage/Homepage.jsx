@@ -51,15 +51,15 @@ function Homepage() {
         <div className="whyUsSection">
             <h2>Why us?</h2>
             <div className="reasons">
-                <div className="reason">
+                <div className="reason reason5">
                     <div className="image"> <img src={Map} alt="" /></div>
                     <div className="text2"> <span>More than 149 travel titles currently in print</span></div>
                 </div>
-                <div className="reason">
+                <div className="reason reason5">
                     <div className="image"> <img src={Baggage} alt="" /></div>
                     <div className="text2"> <span>Supporting millions of travellers since 1982</span></div>
                 </div>
-                <div className="reason">
+                <div className="reason reason5">
                     <div className="image"> <img src={Person} alt="" /></div>
                     <div className="text2"> <span>Our utstanding customer satisfaction </span></div>
                 </div>

@@ -184,6 +184,10 @@ h1 {
     background: var(--gray-50, #F5F7FA);
 }
 
+.whyUsSection .reasons .reason5 {
+    max-height: 120px;
+}
+
 .whyUsSection .reasons .reason .image {
     display: flex;
     padding: 18px;

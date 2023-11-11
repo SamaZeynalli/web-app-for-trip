@@ -25,6 +25,12 @@
     justify-content: flex-start;
     gap: 24px;
     border-right: 1px solid var(--gray-100, #E3E7EB);
+    padding-right: 50px;
+
+}
+
+.destination_section .dest_cntry:last-child {
+    border-right: 0;
 }
 
 .destination_section .dest_cntry .links {

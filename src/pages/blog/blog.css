@@ -55,6 +55,7 @@
     align-content: flex-start;
     gap: 24px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .blogArticlesSection .blogArticles .attractions .trip {

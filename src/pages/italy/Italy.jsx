@@ -191,7 +191,7 @@ const Italy = () => {
                                         </div>
                                 </div>
             </div>
-            <div className="review1">
+            <div className="review5">
                 <div className="reviewText">
                         <div className="comment">
                             <h6>“Tiago put together an epic itinerary for me and my friends. He showed us some hidden hiking trails and amazing local food spots. He even met us for a coffee to make sure we had everything we needed.</h6>

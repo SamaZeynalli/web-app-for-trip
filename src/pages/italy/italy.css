@@ -23,6 +23,12 @@
     align-items: flex-start;
     gap: 16px;
     border-right: 1px solid var(--primary-white, #FFF);
+    padding-right: 50px;
+    padding-bottom: 44px;
+}
+
+.statistika .frames:last-child {
+    border-right: 0;
 }
 
 .statistika .frames svg {
@@ -200,16 +206,16 @@
     line-height: 24px;
 }
 
-.review1 {
+.review5 {
     background-image: url(../../components/IMG/girl.png);
     background-repeat: no-repeat;
     background-size: cover;
     gap: 8px;
-    height: 800px;
     position: relative;
+    height: 800px;
 }
 
-.review1 .reviewText {
+.review5 .reviewText {
     position: absolute;
     right: 72px;
     bottom: 52px;
@@ -219,14 +225,14 @@
     gap: 12px;
 }
 
-.review1 .reviewText .comment {
+.review5 .reviewText .comment {
     width: 416px;
     padding: 24px;
     border-radius: 20px;
     background: var(--primary-white, #FFF);
 }
 
-.review1 .reviewText .comment h6 {
+.review5 .reviewText .comment h6 {
     color: var(--gray-900, #141D24);
     font-family: Inter;
     font-size: 16px;
@@ -235,7 +241,7 @@
     line-height: 24px;
 }
 
-.review1 .reviewText .reviewMember {
+.review5 .reviewText .reviewMember {
     padding: 20px 32px;
     display: flex;
     gap: 16px;
@@ -244,7 +250,7 @@
     width: 416px;
 }
 
-.review1 .reviewText .reviewMember .local {
+.review5 .reviewText .reviewMember .local {
     border-radius: 100px;
     background: var(--violet-500, #4A21EF);
     display: flex;
@@ -253,14 +259,14 @@
     padding: 18px;
 }
 
-.review1 .reviewText .reviewMember .expertName {
+.review5 .reviewText .reviewMember .expertName {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 8px;
 }
 
-.review1 .reviewText .reviewMember .expertName p {
+.review5 .reviewText .reviewMember .expertName p {
     color: var(--gray-400, #788795);
     font-family: Inter;
     font-size: 12px;
@@ -269,7 +275,7 @@
     line-height: 16px;
 }
 
-.review1 .reviewText .reviewMember .expertName .name {
+.review5 .reviewText .reviewMember .expertName .name {
     display: flex;
     gap: 4px;
 }
@@ -291,6 +297,7 @@
     flex: 1;
     height: 200px;
 }
+
 
 .reasons .reason svg {
     border-radius: 100px;
