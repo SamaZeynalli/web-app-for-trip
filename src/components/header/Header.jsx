@@ -30,7 +30,7 @@ const Header = () => {
 
     return(
             <div className="header">
-                <div className="secondaryHeader">
+                <div className="secondaryHeader mobile-hidden">
                 <div className="container">
                     <ul className="links">
                         <li><Link to="/about">About us</Link></li>

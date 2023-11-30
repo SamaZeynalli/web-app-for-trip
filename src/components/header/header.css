@@ -1,9 +1,12 @@
-* {
+
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     cursor: pointer;
 }
+
 
 .header .secondaryHeader {
     display: flex;
@@ -162,7 +165,11 @@
     background: var(--violet-500, #4A21EF);
 }
 
-
+@media (max-width: 576px) {
+    .mobile-hidden {
+      display: none !important;
+    }
+  }
 
 
 
