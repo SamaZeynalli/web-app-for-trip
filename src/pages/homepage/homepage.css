@@ -53,6 +53,7 @@ p {
     display: flex;
     align-items: flex-start;
     gap: 24px;  
+    flex-wrap: nowrap;
 }
 
 .texts {
@@ -149,6 +150,8 @@ h1 {
     gap: 40px;
     padding: 120px 72px;
     justify-content: space-between;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 
 .brand {
@@ -157,6 +160,8 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 
 
@@ -223,7 +228,7 @@ h1 {
 .review .reviewText {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start !important;
     gap: 12px;
     position: absolute;
     right: 72px;
@@ -369,7 +374,21 @@ h1 {
 
 
 
+@media (max-width: 576px) {
+    .whyUsSection .reasons {
+        display: flex;
+        flex-direction: column;
+    }
+    .whyUsSection .reasons .reason {
+        width: 100%;
+    }
 
+    .mobiletext  {
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
 
 
 

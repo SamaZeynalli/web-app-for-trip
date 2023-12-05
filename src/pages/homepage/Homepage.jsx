@@ -67,7 +67,7 @@ function Homepage() {
         </div>
         <Experts/>
         <div className="review">
-            <div className="reviewText">
+            <div className="reviewText mobile_text">
                 <div className="review1">
                     <div className="comment">
                         <p>“Tiago put together an epic itinerary for me and my friends. He showed us some hidden hiking trails and amazing local food spots. He even met us for a coffee to make sure we had everything we needed.</p>

@@ -2,7 +2,8 @@ import React from "react";
 import './header.css';
 import {Link} from 'react-router-dom';
 import MyImage from '../IMG/Logotourist.png';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { FaBars } from 'react-icons/fa';
 
 
 const Header = () => {
@@ -10,8 +11,14 @@ const Header = () => {
         window.location.href = '/login';
       };
 
+        const navRef = useRef();
+
+        const showNavbar = () => {
+            navRef.current.classList.toggle("responsive_nav");
+        }
+
         const [isOpen, setIsOpen] = useState(false);
-        const [selectedCurrency, setSelectedCurrency] = useState('USD$'); // Varsayılan olarak USD seçili
+        const [selectedCurrency, setSelectedCurrency] = useState('USD$');
 
         const currencies = [
             { code: 'AZN', symbol: '₼' },
@@ -61,10 +68,13 @@ const Header = () => {
                 </div>
                 <div className="mainHeader">
                     <div className="container">
-                        <div className="menu">
+                        <nav className="menu responsive_nav" ref={navRef}>
                             <div className="link"><Link to="/Destinations" className="destination">Destinations</Link></div>
                             <div className="link"><Link to="/Privatetrips" className="destination">Private trips</Link></div>
-                        </div>
+                            <button onClick={showNavbar} className="show">
+                                <FaBars />
+                            </button>
+                        </nav>
                         <div className="myImage">
                             <img src={MyImage} alt="" />
                         </div>

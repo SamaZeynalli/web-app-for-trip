@@ -18,13 +18,50 @@ const LOGIN = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');     
+
+    const isValidEmail = (email) => {
+        return /\S+@example\.com/.test(email);
+    };
 
     const handleInputChange = (e) => {
         setEmail(e.target.value);
+        if (!isValidEmail(e.target.value)) {
+            setEmailError('Email sehvdir');
+        } 
+        else {
+            setEmailError('');
+        }
+    };
+
+    const handleSubmit = () => {
+        const formData = new FormData();
+        formData.append('email', email);
+        formData.append('password', password);
+
+        fetch('https://example.com/api/login', {
+        method: 'POST',
+        body: formData,
+    })
+
+    .then(response => response.json())
+    .then(data => {
+        console.log('Server response:', data);
+    })
+    .catch(error => {
+        console.error('Error during form submission:', error);
+    });
     };
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
+        if (e.target.value.length < 8) {
+            setPasswordError('minimum 8 reqem olmalidir');
+        }
+        else {
+            setPasswordError('');
+        }
     };
 
     const togglePasswordVisibility = () => {
@@ -54,6 +91,7 @@ const LOGIN = () => {
                                                 placeholder="someone@example.com"
                                                 value={email} 
                                                 onChange={handleInputChange}/>
+                                                {emailError && <div className="error-message">{emailError}</div>}
                                             </div>
                                     </div>
                                     <div className="input">
@@ -71,13 +109,14 @@ const LOGIN = () => {
                                             icon={showPassword ? faEye : faEyeSlash}
                                             onClick={togglePasswordVisibility}
                                             />
+                                            {passwordError && <div className="error-message">{passwordError}</div>}
                                         </div>
                                     </div>
                                     <div className="forgot" onClick={directToForgot} >
                                         <p>Forgot password?</p>
                                     </div>
                                 </div>
-                                <button>Sign in</button>
+                                <button type="submit" onClick={handleSubmit}>Sign in</button>
                             </div>
                         </div>
                     </div>
